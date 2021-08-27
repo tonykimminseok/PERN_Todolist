@@ -3,7 +3,7 @@ dotenv.config();
 // above code can also be done in this way
 // require("dotenv").config();
 
-const Pool = require("pg").Pool;
+const { Pool } = require("pg");
 
 const pool = new Pool({
   user: process.env.USER,
@@ -13,4 +13,4 @@ const pool = new Pool({
   database: process.env.DATABASE,
 });
 
-module.export = pool;
+module.exports = pool;

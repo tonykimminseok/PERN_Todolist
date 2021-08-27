@@ -8,8 +8,6 @@ const app = express();
 // for example, React front-end and PostgreSQL back-end
 const cors = require("cors");
 
-const pool = require("./db");
-
 // ***** ***** *****
 // middleware
 // ***** ***** *****
@@ -21,7 +19,7 @@ app.use(express.json());
 // ***** ***** *****
 // routes
 // ***** ***** *****
-import todos from "@routes/todos";
+const todos = require("./routes/todos/index.js");
 app.use("/todos", todos);
 
 // ***** ***** *****
